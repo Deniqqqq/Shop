@@ -28,8 +28,12 @@ const productSchema = new mongoose.Schema<IProduct>(
     subcategoryId: {
       type: mongoose.Schema.Types.ObjectId,
       required: true,
+      ref: "Subcategory",
     },
-    productInfoId: mongoose.Schema.Types.ObjectId,
+    productInfoId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "ProductInfo",
+    },
   },
   {
     timestamps: true,
